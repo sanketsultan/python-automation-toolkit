@@ -14,4 +14,4 @@ for p in port:
         print(f"Port {p} is open (Response time: {response_time:.2f} ms)")
     else:
         print(f"Port {p} is closed (Response time: {response_time:.2f} ms)")
-    s.close()        
+    s.close()
