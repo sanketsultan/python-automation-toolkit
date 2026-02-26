@@ -10,6 +10,19 @@ for host in hosts:
         dns_cache[host] = ip
     except socket.gaierror:
         dns_cache[host] = "unresolved"
-
+    
+host_to_find = "google.com"
+if host_to_find in dns_cache:
+    print(f"\nLookup: {host_to_find} -> {dns_cache[host_to_find]}")
+    
+# find all unresolved hosts
+print("\nUnresolved hosts:")
 for host, ip in dns_cache.items():
-    print(f"{host} -> {ip}")
+    if ip == "unresolved":
+        print(f"  {host}")
+
+# find all resolved hosts
+print("\nResolved hosts:")
+for host, ip in dns_cache.items():
+    if ip != "unresolved":
+        print(f"  {host} -> {ip}")
