@@ -1,0 +1,5 @@
+google.com
+github.com
+booking.com
+cloudflare.com
+wronghost.xyz
